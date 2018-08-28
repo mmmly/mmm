@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="./js/rem.js"></script>
+  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="./css/bijia.css">
+  <title>慢慢买</title>
+</head>
+
+<body>
+  <div class="container">
+    <!-- 头部 -->
+    <div class="mm-header clearfix">
+      <div class="left">
+        <a href="#top">
+          <img src="./images/header_logo.png" alt="">
+        </a>
+      </div>
+      <div class="download">
+        <a href="#">
+          <img src="./images/header_app.png" alt="">
+        </a>
+      </div>
+    </div>
+    <!-- 搜索框 -->
+    <div class="mm-search">
+      <div class="m-inp">
+        <input type="text" placeholder="请输入你想比价的商品">
+      </div>
+      <div class="m-btn">
+        <button>搜索</button>
+      </div>
+    </div>
+
+    <!-- 商品列表页main -->
+    <div class="mm-main">
+      <div class="bread-nav">
+        
+    </div>
+    <div class="pro-detail">
+      <!-- 商品详情 -->
+    <div class="title">
+      <h3>{{v.productName}}</h3>
+      {{@v.productImg}}
+      <button>收藏</button>
+    </div>
+    <!-- 中间部分 -->
+    <div class="middle">
+      <ul class="clearfix">
+        <li>比价购买</li>
+        <li>产品参数</li>
+        <li>评价(2322)</li>
+      </ul>
+      <!-- <div class="sourse">
+        <img src="" alt=""><a href="#">京东商城</a>
+        <div class="buy fr">去购买</div>
+        <div class="price fr">￥1499.00</div>
+      </div> -->
+      {{@v.bjShop }}
+      <div class="bottom">
+          * 实际价格以各网站列出的实时售价为准，我们提供的价格可能有数小时至数日的延迟。
+      </div> 
+    </div>
+    </div>
+  
+    <!-- 网友评价 -->
+    <div class="comment">
+      <h3>网友评价</h3>
+      <div class="comTitle clearfix">
+        <p >j**北<span>2015/7/30</span></p> 
+        <p>购买自:京东商城</p>
+      </div>
+      <div class="text">
+          总体满意吧，毕竟一分价钱一分货，做工简陋，显得份量没那么足。外机很轻，不知道是啥牌子压缩机，外观漂亮，就是工艺差了点 很一般的孰料板，然后就是最为重要的制冷效果，适合18平方一下的，大房间上1.5 吧  1匹的要开一个两个小时，房间整体温度才会降下来，噪音方面确实很静音，制冷效果不是很理想，但是也够用了！安装师傅很积极，上午一收货，下午立马就来安装，速度很赞，但是做起事情来，太急忙了，一点都不细心弄，还不停的接电话，说什么马上到 20分钟到，很赶时间的样子，随便给我装好了，连打孔的那个孰料圈都忘记卡上去，打孔很薄的墙壁 收了我50块钱，最后安装完，急忙走了！
+      </div>
+      
+    </div>
+     
+      
+    </div>
+
+
+      <!-- 底部 -->
+      <div class="mm-footer">
+        <ul>
+          <li><a href="#">登录</a></li>
+          <li><a href="#">注册</a></li>
+          <li><a href="#" id="top"><img src="./images/top.jpg" alt="">返回顶部</a></li>
+        </ul>
+        <p>手机APP下载<a href="index.html">慢慢买手机版</a> -- 掌上比价平台
+          </p>
+          <p>m.manmanbuy.com</p>
+      </div>
+  </div>
+
+<!-- 导航模板 -->
+<script type="text/html" id="navTpl">
+  <ul class="breadcrumb clearfix">
+    <li>
+        <a href="index.html">首页</a> <span >></span>
+    </li>
+    <li>
+        <a href="productlist.html?categoryid={{ info.categoryId }}">{{info.category}}</a> <span >></span>
+    </li>
+    <li class="active">{{ productName }} ></li>
+    <div class="fr">筛选</div>
+</ul>
+</script>
+
+<script type="text/html" id="proTpl">
+  <!-- 商品详情 -->
+  {{ each result v i }}
+  <div class="title">
+    <h3>{{v.productName}}</h3>
+    {{@v.productImg}}
+    <button>收藏</button>
+  </div>
+  <!-- 中间部分 -->
+  <div class="middle">
+    <ul class="clearfix">
+      <li>比价购买</li>
+      <li>产品参数</li>
+      <li>评价(2322)</li>
+    </ul>
+    <!-- <div class="sourse">
+      <img src="" alt=""><a href="#">京东商城</a>
+      <div class="buy fr">去购买</div>
+      <div class="price fr">￥1499.00</div>
+    </div> -->
+    {{@v.bjShop }}
+    <div class="bottom">
+        * 实际价格以各网站列出的实时售价为准，我们提供的价格可能有数小时至数日的延迟。
+    </div> 
+  </div>
+  {{ /each }}
+</script>
+
+
+  <!-- 网友评价 -->
+  <script type="text/html" id="comTpl">
+    <h3>网友评价</h3>
+  {{ each result v i }}
+   
+    <div class="comTitle clearfix">
+      <p >{{v.comName}}<span>{{v.comTime}}</span></p> 
+      <p>{{v.comFrom}}</p>
+    </div>
+    <div class="text">
+        {{v.comContent}}
+    </div>
+  {{ /each }}
+  <div class="btn"><button>查看更多评价</button></div>
+</script>
+
+<!-- 商品列表模板 -->
+
+
+
+<!-- 分页模板 -->
+
+</body>
+<script src="./lib/artTemplate/template-web.js"></script>
+<script src="./lib/jquery/jquery.min.js"></script>
+<script src="./js/common.js"></script>
+<script src="./js/bijia.js"></script>
+
+</html>

@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="./js/rem.js"></script>
+  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="./css/gsproduct.css">
+  <title>慢慢买</title>
+</head>
+
+<body>
+  <div class="container">
+    <!-- 头部 -->
+    <div class="mm-header1 clearfix">
+      <div class="left">
+        <a href="javascript:history.go(-1);">
+          <img src="./images/icback.svg" alt="">
+        </a>
+      </div>
+      <div class="download">
+        <a href="#">
+          <img src="./images/header_app.png" alt="">
+        </a>
+      </div>
+      <div class="center">凑单品</div>
+    </div>
+   
+
+    <div class="mm-nav">
+      <ul class="up clearfix">
+        <div class="search"></div>
+        <li class="jd">京东<span></span></li>
+        <li class="hb">华北<span></span></li>
+        <li class="all">全部价格<span></span></li>
+        <div class="jd-nav hide down-nav">
+            <ul>
+              <li>全部价格</li>
+            </ul>
+          </div>
+        <div class="hb-nav hide down-nav">
+            <ul>
+              <li>全部价格</li>
+            </ul>
+          </div>
+        <div class="all-nav hide down-nav">
+            <ul>
+              <li><a href="#">全部价格</a></li>
+            </ul>
+          </div>
+      </ul>
+     
+    </div>
+    <!-- 折扣列表 -->
+    <div class="mm-list clearfix">
+      
+    </div>
+
+  
+
+
+    
+
+      <!-- 底部 -->
+      <div class="mm-footer">
+        <ul>
+          <li><a href="#">登录</a></li>
+          <li><a href="#">注册</a></li>
+          <li><a href="#" id="top"><img src="./images/top.jpg" alt="">返回顶部</a></li>
+        </ul>
+        <p>手机APP下载<a href="index.html">慢慢买手机版</a> -- 掌上比价平台
+        </p>
+          <p>m.manmanbuy.com</p>
+      </div>
+  </div>
+
+ 
+<!-- 京东下拉模板 -->
+  <script type="text/html" id="jdTpl">
+    <ul>
+  {{ each result v i }}
+    <li><a href="#" data-shopid="{{ v.shopId }}">{{ v.shopName }}</a></li>
+    {{ /each }}
+  </ul>
+  </script>
+  <!-- 华北下拉模板 -->
+  <script type="text/html" id="hbTpl">
+    <ul>
+  {{ each result v i }}
+    <li><a href="#" data-areaid ="{{ v.areaId}}">{{ v.areaName }}</a></li>
+    {{ /each }}
+  </ul>
+  </script>
+
+
+  <!-- 产品模板 -->
+  <script type="text/html" id="proTpl">
+    <ul class="clearfix">
+  {{ each result v i }}
+      <li>
+        <img src="{{ v.productImg}}" alt="">
+        <div class="desc">
+          <p>{{ v.productName }}</p>
+        </div>
+        <div class="price fl"><span>{{ v.productPrice}}</span></div>
+        <div class="btn fr">去购买</div>
+      </li>
+
+  {{ /each }}
+    </ul>
+  </script>
+
+</body>
+<script src="./lib/artTemplate/template-web.js"></script>
+<script src="./lib/jquery/jquery.min.js"></script>
+<script src="./js/common.js"></script>
+<script src="./js/gsproduct.js"></script>
+
+</html>

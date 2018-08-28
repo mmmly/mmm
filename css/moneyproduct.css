@@ -1,0 +1,154 @@
+.mm-header .left {
+  padding: .15rem .15rem;
+}
+.mm-header .left a img {
+  width: .2rem;
+}
+.mm-header .center {
+  font-size: .2rem;
+  color: #fff;
+  text-align: center;
+  line-height: .5rem;
+}
+.mm-list {
+  width: 100%;
+  padding: .2rem .1rem;
+}
+.mm-list h3 {
+  font-size: .24rem;
+}
+.mm-list p {
+  font-size: .22rem;
+  color: #606060;
+}
+.mm-list .from {
+  padding: .2rem;
+  color: #aaa;
+}
+.mm-list .from span {
+  font-size: .18rem;
+}
+.mm-list .list-item-detail {
+  width: 100%;
+}
+.mm-list .list-item-detail .list-item {
+  width: 100%;
+  background-color: #fff;
+  padding: .14rem .08rem ;
+  border-bottom: none;
+}
+.mm-list .list-item-detail .list-item .fr {
+  float: right;
+}
+.mm-list .list-item-detail .list-item .fr img {
+  float: right;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.mm-list .list-item-detail .list-item .fr {
+  padding-left: .2rem;
+  overflow: hidden;
+}
+.mm-list .list-item-detail .list-item .fr .pro-det {
+  height: .57rem;
+  font-size: .15rem;
+}
+.mm-list .list-item-detail .list-item .fr .pro-det span:last-child {
+  color: orange;
+}
+.mm-list .list-item-detail .list-item .other {
+  text-align: left;
+}
+.mm-list .list-item-detail .list-item .other img {
+  width: 4.5rem;
+}
+.mm-list .list-item-detail .list-item #disstorck {
+  margin: .2rem auto;
+  width: 1.52rem;
+  padding: .1rem;
+  border: .02rem solid #ccc;
+  box-shadow: .03rem 0 .02rem #ccc;
+}
+.mm-list .list-item-detail .list-item #disstorck li {
+  line-height: .3rem;
+  border-bottom: .02rem dashed #ccc;
+}
+.mm-list .list-item-detail .list-item #disstorck li a {
+  color: #333;
+  font-weight: 700;
+}
+.mm-list .list-item-detail .list-item #disstorck li a span {
+  text-align: left;
+}
+.mm-list .list-item-detail .list-item #disstorck li a strong {
+  color: orange;
+  float: right;
+}
+.mm-list .list-item-detail .list-item .buy {
+  width: 100%;
+  padding: .1rem .2rem;
+}
+.mm-list .list-item-detail .list-item .buy button {
+  width: 100%;
+  background-color: #FF9000;
+  color: #fff;
+  line-height: .4rem;
+  border: none;
+  font-weight: 700;
+}
+.mm-list .list-item-detail .list-item .erweima {
+  width: 100%;
+  padding: .1rem;
+}
+.mm-list .list-item-detail .list-item .erweima img {
+  width: 100%;
+  height: 2rem;
+}
+.mm-list .list-item-detail .list-item .tit {
+  font-size: .2rem;
+}
+.mm-list .list-item-detail .list-item .form {
+  width: 100%;
+  padding: .1rem 0;
+  position: relative;
+}
+.mm-list .list-item-detail .list-item .form textarea {
+  width: 100%;
+  height: 1.5rem;
+}
+.mm-list .list-item-detail .list-item .form .tjdp {
+  padding: .1rem;
+  position: absolute;
+  right: 0;
+  bottom: .14rem;
+  background-color: #ff841d;
+  color: #fff;
+  font-size: .2rem;
+}
+.mm-list .list-item-detail .ui-border-b {
+  margin-top: .3rem;
+}
+.mm-list .list-item-detail .ui-border-b .userimg {
+  float: left;
+  margin-right: .2rem;
+}
+.mm-list .list-item-detail .ui-border-b .userimg img {
+  width: .5rem;
+  height: .5rem;
+  border-radius: 50%;
+}
+.mm-list .list-item-detail .ui-border-b .con {
+  overflow: hidden;
+}
+.mm-list .list-item-detail .ui-border-b .con .username {
+  font-size: .18rem;
+  color: #5997c0;
+  float: left;
+}
+.mm-list .list-item-detail .ui-border-b .con .time {
+  float: right;
+}
+.mm-list .list-item-detail .ui-border-b .con .content {
+  font-size: .18rem;
+  color: #666;
+}

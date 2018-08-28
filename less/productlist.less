@@ -1,0 +1,81 @@
+/*面包屑导航*/
+.breadcrumb{
+  padding-left: .2rem;
+  padding-right: .2rem;
+  line-height: .4rem;
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  background-image: linear-gradient(to bottom, #ffffff, #ebebeb);
+  margin-top: .1rem;
+  li{
+    float: left;
+    font-size: .16rem;
+    a{
+      font-size: .16rem;
+    }
+  }
+  div{
+    margin-top: .03rem;
+    width: .6rem;
+    height: .35rem;
+    border-radius: .1rem;
+    font-size:.16rem;
+    border: 1px solid #ccc;    
+    background-image: linear-gradient(to top, #eee, #ccc);
+    text-align: center;
+    line-height: .35rem;
+  }
+}
+
+/*商品列表*/
+.list-item-detail{
+  width: 100%;
+  .list-item{
+    width: 100%;
+    height: 1.3rem;
+    background-color: #fff;
+    padding: .14rem .08rem ;
+    border-bottom: 1px solid #ccc;
+    .left{
+      width: 1.3rem;
+      height: 100%;
+      float: left;
+      img{
+        width: 1.3rem;
+        height: 1.1rem;
+        background-color: pink;
+        
+      }
+    }
+    .right {
+      padding-left: .1rem;
+      overflow: hidden;
+      .pro-det{
+        height: .5rem;
+        font-size: .15rem;
+        span:last-child{
+          color:orange;
+        }
+      }
+      .other{
+        >span{
+          color: #666;
+          font-size: .18rem;
+          color: red;
+        }
+      } 
+          .comment{
+            color: #666;
+            font-size: .12rem;
+            i{
+              display: inline-block;
+              // width: .16rem;
+              // height: .15rem;
+              font-style: normal;
+            }
+          }
+    }
+  }
+} 
+

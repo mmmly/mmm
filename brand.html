@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="./js/rem.js"></script>
+  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="./css/brand.css">
+  <title>慢慢买</title>
+</head>
+
+<body>
+  <div class="container">
+    <!-- 头部 -->
+    <div class="mm-header clearfix">
+      <div class="left">
+        <a href="#top">
+          <img src="./images/header_logo.png" alt="">
+        </a>
+      </div>
+      <div class="download">
+        <a href="#">
+          <img src="./images/header_app.png" alt="">
+        </a>
+      </div>
+    </div>
+    <!-- 搜索框 -->
+    <div class="mm-search">
+      <div class="m-inp">
+        <input type="text" placeholder="请输入你想比价的商品">
+      </div>
+      <div class="m-btn">
+        <button>搜索</button>
+      </div>
+    </div>
+
+    <!-- 商品列表页main -->
+    <div class="mm-main">
+      <div class="bread-nav">
+        <ul class="breadcrumb clearfix">
+          <li>
+            <a href="index.html">首页</a>
+            <span>></span>
+          </li>
+          <li>
+            <a href="brandTitle.html">全部分类</a>
+            <span>></span>
+          </li>
+          <!-- <li class="active">电视</li> -->
+          <!-- <div class="fr">筛选</div> -->
+        </ul>
+      </div>
+      <!-- 十大品牌排行 -->
+      <div class="mm-brandTitle">
+        <div class="title">
+          <p>平板电视哪个牌子好</p>
+        </div>
+        <div class="content">
+          <ul>
+            <li></li>
+          </ul>
+        </div>
+      </div>
+      <!-- 产品销量排行 -->
+      <div class="mm-brandProduct">
+        <div class="title">
+          <p>平板电视产品销量排行</p>
+        </div>
+        <div class="product">
+          <ul>
+            <li></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 评论列表 -->
+     <div class="comment">
+        <div class="title">
+            <p>平板电视最新评论</p>
+          </div>
+        <div class="comlist">
+        </div>
+     </div>
+
+
+      <!-- 底部 -->
+      <div class="mm-footer">
+        <ul>
+          <li>
+            <a href="#">登录</a>
+          </li>
+          <li>
+            <a href="#">注册</a>
+          </li>
+          <li>
+            <a href="#" id="top">
+              <img src="./images/top.jpg" alt="">返回顶部</a>
+          </li>
+        </ul>
+        <p>手机APP下载
+          <a href="index.html">慢慢买手机版</a> -- 掌上比价平台
+        </p>
+        <p>m.manmanbuy.com</p>
+      </div>
+    </div>
+
+    <!-- 十大品牌模板 -->
+    <script type="text/html" id="tenTpl">
+  <ul>
+{{ each result v i }}
+    <li><a href="#">
+      <div class="box">{{ i+1 }}</div>
+      <div class="right">
+          <div class="ten-title"><p>{{ v.brandName }}</p></div>
+          <div class="desc">
+            <span>{{ v.brandInfo}}</span>
+          </div>
+      </div>
+    </a></li>
+{{ /each }}
+</ul>
+</script>
+
+    <!-- 产品排行模板 -->
+    <script type="text/html" id="proTpl">
+  <ul>
+{{ each result v i }}
+    <li><a href="#"  data-id="{{ v.productId }}">
+      <div class="img">{{@v.productImg}}</div>
+      <div class="right">
+          <div class="ten-title"><p>{{ v.productName }}</p></div>
+          <div class="desc">
+            <span>{{ v.productPrice}}</span>
+            <span class="star fr"></span>
+            <p>
+              <span>{{ v.productQuote}}</span>
+              <span>{{ v.productCom}}</span>
+            </p>
+          </div>
+      </div>
+    </a></li>
+{{ /each }}
+</ul>
+</script>
+
+
+
+<!-- 评论列表模板 -->
+<script type="text/html" id="comTpl">
+<ul>
+{{ each result v i }}
+    <li>
+      
+      <div class="comtop">
+        <img src="./images/tv.png" alt="">
+        <p>乐视TV(Letv) 超3 X55 55英寸智能LED液晶 超级电视 4K超清电视</p>
+      </div>
+      <div class="comcontent">
+        <div class="user clearfix">
+          <span class="fl m_10">{{v.comName}}</span>
+          <span class="star fl"></span>
+          <span class="fr">{{v.comTime}}</span>
+        </div>
+        <div class="text">{{v.comContent}}</div>
+      </div>
+    </li>
+  {{ /each }}
+  </ul>
+</script>
+
+
+</body>
+<script src="./lib/artTemplate/template-web.js"></script>
+<script src="./lib/jquery/jquery.min.js"></script>
+<script src="./js/common.js"></script>
+<script src="./js/brand.js"></script>
+
+</html>

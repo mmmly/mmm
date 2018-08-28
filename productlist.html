@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="./js/rem.js"></script>
+  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="./css/productlist.css">
+  <title>慢慢买</title>
+</head>
+
+<body>
+  <div class="container">
+    <!-- 头部 -->
+    <div class="mm-header clearfix">
+      <div class="left">
+        <a href="#top">
+          <img src="./images/header_logo.png" alt="">
+        </a>
+      </div>
+      <div class="download">
+        <a href="#">
+          <img src="./images/header_app.png" alt="">
+        </a>
+      </div>
+    </div>
+    <!-- 搜索框 -->
+    <div class="mm-search">
+      <div class="m-inp">
+        <input type="text" placeholder="请输入你想比价的商品">
+      </div>
+      <div class="m-btn">
+        <button>搜索</button>
+      </div>
+    </div>
+
+    <!-- 商品列表页main -->
+    <div class="mm-main">
+      <div class="bread-nav">
+          <!-- <ul class="breadcrumb clearfix">
+              <li>
+                  <a href="index.html">首页</a> <span >></span>
+              </li>
+              <li>
+                  <a href="category.html">全部分类</a> <span >></span>
+              </li>
+              <li class="active">电视</li>
+              <div class="fr">筛选</div>
+          </ul> -->
+      </div>
+      <!-- 商品列表 -->
+        <div class="list-item-detail">
+           <!-- 坑 -->
+        </div>
+        <!-- 分页 -->
+        <div class="page clearfix">
+          <div class="prev fl"><button>上一页</button></div>
+          <div class="next fr"><button>下一页</button></div>
+          <div class="currentPage">
+            <span>1/3</span>
+            <ul class="">
+              <li>1/3</li>
+              <li>2/3</li>
+              <li>3/3</li>
+            </ul>
+          </div>
+          
+        </div>
+      
+    </div>
+
+
+      <!-- 底部 -->
+      <div class="mm-footer">
+        <ul>
+          <li><a href="#">登录</a></li>
+          <li><a href="#">注册</a></li>
+          <li><a href="#" id="top"><img src="./images/top.jpg" alt="">返回顶部</a></li>
+        </ul>
+        <p>手机APP下载<a href="index.html">慢慢买手机版</a> -- 掌上比价平台
+        </p>
+          <p>m.manmanbuy.com</p>
+      </div>
+  </div>
+
+<!-- 面包屑导航模板 -->
+<script type="text/html" id="navTpl">
+  <ul class="breadcrumb clearfix">
+      {{ each result v i }}
+    <li>
+        <a href="index.html">首页</a> <span >></span>
+    </li>
+    <li>
+        <a href="category.html">全部分类</a> <span >></span>
+    </li>
+    <li class="active">{{ v.category }}</li>
+    <div class="fr">筛选</div>
+    {{ /each }}
+</ul>
+</script>
+
+<!-- 商品列表模板 -->
+<script type="text/html" id="listTpl">
+{{ each result v i }}
+<div class="list-item" data-id="{{ v.productId }}">
+    <a href="bijia.html?productid={{ v.productId }}&categoryid={{ v.categoryId }}">
+        <div class="left">
+            {{@v.productImg}}
+          </div>
+          <div class="right">
+              <div class="pro-det">
+                 {{ v.productName}}
+              </div>
+              <div class="other">
+                <span>{{v.productPrice}}</span>
+              </div>                                
+                <span class="comment"><i>{{v.productQuote}}</i>{{v.productCom}}</span>
+          </div>
+    </a>
+  </div>
+{{ /each }}
+</script>
+
+
+<!-- 分页模板 -->
+<script type="text/html" id="pageTpl">
+  <span>{{currentPage }}/{{totalPage}}</span>
+  <ul class="hide">
+    <%
+    for(var i = 1; i <= totalPage; i++){
+    %>
+      <li data-page-id="{{ i }}">{{i}}/{{totalPage}}</li>
+    <% } %>
+    </ul>
+
+</script>
+</body>
+<script src="./lib/artTemplate/template-web.js"></script>
+<script src="./lib/jquery/jquery.min.js"></script>
+<script src="./js/common.js"></script>
+<script src="./js/productlist.js"></script>
+
+</html>

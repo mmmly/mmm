@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="./js/rem.js"></script>
+  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="./css/brandTitle.css">
+  <title>慢慢买</title>
+</head>
+
+<body>
+    <div class="container">
+        <!-- 头部 -->
+        <div class="mm-header clearfix">
+          <div class="left">
+            <a href="#top">
+              <img src="./images/header_logo.png" alt="">
+            </a>
+          </div>
+          <div class="download">
+            <a href="#">
+              <img src="./images/header_app.png" alt="">
+            </a>
+          </div>
+        </div>
+        <!-- 搜索框 -->
+        <div class="mm-search">
+          <div class="m-inp">
+            <input type="text" placeholder="请输入你想比价的商品">
+          </div>
+          <div class="m-btn">
+            <button>搜索</button>
+          </div>
+        </div>
+    
+        <!-- 商品列表页main -->
+        <div class="mm-main">
+          <div class="bread-nav">
+              <ul class="breadcrumb clearfix">
+                  <li>
+                      <a href="index.html">首页</a> <span >></span>
+                  </li>
+                  <li>
+                      <a href="brandTitle.html">全部分类</a> <span >></span>
+                  </li>
+                  <!-- <li class="active">电视</li> -->
+                  <!-- <div class="fr">筛选</div> -->
+              </ul>
+          </div>
+         <!-- 品牌排行 -->
+         <div class="mm-brandTitle">
+           <div class="title"><p>热门品牌排行</p></div>
+           <div class="content">
+             <ul>
+               <li></li>
+             </ul>
+           </div>
+         </div>
+    
+    
+          <!-- 底部 -->
+          <div class="mm-footer">
+            <ul>
+              <li><a href="#">登录</a></li>
+              <li><a href="#">注册</a></li>
+              <li><a href="#" id="top"><img src="./images/top.jpg" alt="">返回顶部</a></li>
+            </ul>
+            <p>手机APP下载<a href="index.html">慢慢买手机版</a> -- 掌上比价平台
+            </p>
+              <p>m.manmanbuy.com</p>
+          </div>
+      </div>
+
+ <!-- 商品分类标题模板 -->
+ <script type="text/html" id="contTpl">
+  <ul>
+{{ each result v i }}
+    <li><a href="brand.html?brandtitleid={{ v.brandTitleId }}">{{ v.brandTitle }}</a></li>
+{{ /each }}
+</ul>
+</script>
+
+
+
+
+</body>
+<script src="./lib/artTemplate/template-web.js"></script>
+<script src="./lib/jquery/jquery.min.js"></script>
+<script src="./js/brandTitle.js"></script>
+
+</html>

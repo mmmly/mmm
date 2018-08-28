@@ -1,0 +1,49 @@
+/*头部*/
+.mm-header .left {
+  padding: .15rem .15rem;
+}
+.mm-header .left a img {
+  width: .2rem;
+}
+.mm-header .center {
+  font-size: .2rem;
+  color: #fff;
+  text-align: center;
+  line-height: .5rem;
+  font-weight: 700;
+}
+/*列表部分*/
+.count-item {
+  width: 100%;
+}
+.count-item .list-item {
+  float: left;
+  width: 50%;
+  height: 3.3rem;
+  padding: .3rem;
+  border: 1px solid #ccc;
+}
+.count-item .list-item img {
+  width: 1.8rem;
+  display: block;
+  margin: 0 auto;
+}
+.count-item .list-item .price {
+  font-size: .18rem;
+  font-weight: 700;
+  height: .5rem;
+  overflow: hidden;
+}
+.count-item .list-item p {
+  text-align: left;
+  color: #ff6c00;
+  font-size: .18rem;
+  height: .24rem;
+  overflow: hidden;
+}
+.count-item .list-item .detail {
+  color: #666;
+}
+.count-item .list-item .detail span {
+  font-size: .16rem;
+}

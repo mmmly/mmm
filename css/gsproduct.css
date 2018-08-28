@@ -1,0 +1,95 @@
+body {
+  background-color: #f1f1f1;
+}
+.mm-nav {
+  height: .6rem;
+  position: relative;
+  border-bottom: 1px solid #ccc;
+}
+.mm-nav .up {
+  height: 100%;
+  position: relative;
+  padding-right: .6rem;
+}
+.mm-nav .up .search {
+  width: .6rem;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  border-left: 1px solid #ccc;
+}
+.mm-nav .up li {
+  width: 33.33%;
+  float: left;
+  font-size: .20rem;
+  text-align: center;
+  line-height: .5rem;
+}
+.mm-nav .up li a {
+  display: block;
+}
+.mm-nav .up li span {
+  display: inline-block;
+  width: .25rem;
+  height: .25rem;
+  margin-left: .1rem;
+  background-image: url(../images/up.svg);
+  background-size: 100%;
+}
+.mm-nav .up .down-nav {
+  width: 100%;
+  position: absolute;
+  z-index: 99;
+  top: .6rem;
+  left: 0;
+  background-color: #fff;
+}
+.mm-nav .up .down-nav li {
+  padding-left: .2rem;
+  text-align: left;
+  width: 100%;
+  border-bottom: 1px solid #ccc;
+}
+.mm-nav .up .down-nav li a {
+  font-size: .18rem;
+}
+.mm-list ul {
+  padding: .1rem;
+}
+.mm-list ul li {
+  float: left;
+  width: 48%;
+  margin: .06rem;
+  padding: .05rem;
+  background-color: #fff;
+}
+.mm-list ul li img {
+  display: block;
+  margin: 0 auto;
+  width: 1.9rem;
+  height: 1.9rem;
+}
+.mm-list ul li .desc {
+  margin-bottom: .3rem;
+  margin-top: .1rem;
+}
+.mm-list ul li .desc p {
+  font-size: .18rem;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.mm-list ul li .price {
+  color: #ff841d;
+}
+.mm-list ul li .btn {
+  background-color: #ff841d;
+  width: .6rem;
+  height: .3rem;
+  font-size: .16rem;
+  color: #fff;
+  text-align: center;
+  line-height: .3rem;
+}

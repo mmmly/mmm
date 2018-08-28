@@ -1,0 +1,28 @@
+.mm-main {
+  width: 100%;
+  background-color: #ededed;
+  border-top: 1px solid #ccc;
+}
+.mm-main li a {
+  padding-left: .1rem;
+  display: block;
+  font-size: .20rem;
+  font-weight: 700;
+  line-height: .4rem;
+  border-bottom: 1px solid #ccc;
+}
+.mm-main .main-hide {
+  width: 100%;
+  background-color: #f9f9f9;
+}
+.mm-main .main-hide li {
+  float: left;
+  width: 33.33%;
+  height: .4rem;
+  border-right: 1px solid #ccc;
+}
+.mm-main .main-hide li a {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 400;
+}

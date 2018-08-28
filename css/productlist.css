@@ -1,0 +1,74 @@
+/*面包屑导航*/
+.breadcrumb {
+  padding-left: .2rem;
+  padding-right: .2rem;
+  line-height: .4rem;
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  background-image: linear-gradient(to bottom, #ffffff, #ebebeb);
+  margin-top: .1rem;
+}
+.breadcrumb li {
+  float: left;
+  font-size: .16rem;
+}
+.breadcrumb li a {
+  font-size: .16rem;
+}
+.breadcrumb div {
+  margin-top: .03rem;
+  width: .6rem;
+  height: .35rem;
+  border-radius: .1rem;
+  font-size: .16rem;
+  border: 1px solid #ccc;
+  background-image: linear-gradient(to top, #eee, #ccc);
+  text-align: center;
+  line-height: .35rem;
+}
+/*商品列表*/
+.list-item-detail {
+  width: 100%;
+}
+.list-item-detail .list-item {
+  width: 100%;
+  height: 1.3rem;
+  background-color: #fff;
+  padding: .14rem .08rem ;
+  border-bottom: 1px solid #ccc;
+}
+.list-item-detail .list-item .left {
+  width: 1.3rem;
+  height: 100%;
+  float: left;
+}
+.list-item-detail .list-item .left img {
+  width: 1.3rem;
+  height: 1.1rem;
+  background-color: pink;
+}
+.list-item-detail .list-item .right {
+  padding-left: .1rem;
+  overflow: hidden;
+}
+.list-item-detail .list-item .right .pro-det {
+  height: .5rem;
+  font-size: .15rem;
+}
+.list-item-detail .list-item .right .pro-det span:last-child {
+  color: orange;
+}
+.list-item-detail .list-item .right .other > span {
+  color: #666;
+  font-size: .18rem;
+  color: red;
+}
+.list-item-detail .list-item .right .comment {
+  color: #666;
+  font-size: .12rem;
+}
+.list-item-detail .list-item .right .comment i {
+  display: inline-block;
+  font-style: normal;
+}

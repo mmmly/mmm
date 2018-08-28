@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="./js/rem.js"></script>
+  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="./css/baicaijia.css">
+  <title>慢慢买</title>
+</head>
+
+<body>
+  <div class="container">
+    <!-- 头部 -->
+    <div class="mm-header clearfix">
+      <div class="left">
+        <a href="javascript:history.go(-1);">
+          <img src="./images/icback.svg" alt="">
+        </a>
+      </div>
+      <div class="download">
+        <a href="#">
+          <img src="./images/header_app.png" alt="">
+        </a>
+      </div>
+      <div class="center">省钱控-最新优惠</div>
+    </div>
+   
+    <div class="mm-nav" id="wrapper">
+        <ul class="clearfix">
+      </ul>
+    </div>
+   
+    <div class="list-pro">
+      
+    </div>
+
+    
+
+      <!-- 底部 -->
+      <div class="mm-footer">
+        <ul>
+          <li><a href="#">登录</a></li>
+          <li><a href="#">注册</a></li>
+          <li><a href="#" id="top"><img src="./images/top.jpg" alt="">返回顶部</a></li>
+        </ul>
+        <p>手机APP下载<a href="index.html">慢慢买手机版</a> -- 掌上比价平台
+        </p>
+          <p>m.manmanbuy.com</p>
+      </div>
+  </div>
+<!-- 导航模板 -->
+ <script type="text/html" id="navTpl">
+ 
+  {{ each result v i }}
+      <li><a href="#" data-id="{{ v.titleId }}" class={{ i === 0? 'active':''}}>{{ v.title }}</a></li>
+  {{ /each }}
+   
+ 
+</script>
+
+<!-- 商品列表模板 -->
+  <script type="text/html" id="listTpl">
+  {{ each result v i }}
+  <div class="list-item clearfix">
+    <div class="left">{{@v.productImg}}</div>
+    <div class="right">
+      <a href="#">
+        <div class="title">{{@v.productName}}</div>
+        <div class="price">{{@v.productPrice}}</div>
+      </a>
+     {{@v.productCouponRemain}}
+      <div class="countLink">{{@v.productCoupon}}</div>
+      <div class="shopLink">{{@v.productHref}}</div>  
+    </div>
+  </div>
+  {{ /each }}
+  </script>
+
+
+</body>
+<script src="./lib/artTemplate/template-web.js"></script>
+<script src="./lib/jquery/jquery.min.js"></script>
+<script src="./lib/IScroll/iscroll.js"></script>
+<script src="./js/common.js"></script>
+<script src="./js/baicaijia.js"></script>
+
+</html>

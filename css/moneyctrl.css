@@ -1,0 +1,19 @@
+.mm-header .left {
+  padding: .15rem .15rem;
+}
+.mm-header .left a img {
+  width: .2rem;
+}
+.mm-header .center {
+  font-size: .2rem;
+  color: #fff;
+  text-align: center;
+  line-height: .5rem;
+}
+.page .currentPage ul {
+  top: auto;
+  bottom: .43rem;
+}
+.list-item-detail .list-item {
+  height: 1.3rem;
+}

@@ -1,0 +1,39 @@
+.mm-header {
+  background-color: #f4483e;
+}
+.mm-header .left {
+  padding: .15rem .15rem;
+}
+.mm-header .left a img {
+  width: .2rem;
+}
+.mm-header .center {
+  font-size: .2rem;
+  color: #fff;
+  text-align: center;
+  line-height: .5rem;
+}
+.mm-nav {
+  width: 100%;
+  padding: .1rem;
+}
+.mm-nav ul {
+  margin: 0 auto;
+}
+.mm-nav li {
+  display: inline-block;
+  width: 30%;
+  border: 1px solid #ccc;
+  margin: .1rem .05rem;
+}
+.mm-nav li a {
+  display: block;
+  text-align: center;
+}
+.mm-nav li a img {
+  width: .65rem;
+  margin: .1rem .5rem;
+}
+.mm-nav li a p {
+  text-align: center;
+}

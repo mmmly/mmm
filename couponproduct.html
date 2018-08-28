@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="./css/couponproduct.css">
+  <title>慢慢买</title>
+</head>
+
+<body>
+  <!-- 轮播模态框 -->
+  <div class="modal">
+    <div class="inner">
+      <div class="imgBox">
+       
+      </div>        
+      <div class="left arrow"></div>
+      <div class="right arrow"></div>
+      <div class="close"></div>
+    </div>
+  </div>
+
+
+  <div class="container">
+    <!-- 头部 -->
+    <div class="mm-header clearfix">
+      <div class="left">
+        <a href="javascript:history.go(-1);">
+          <img src="./images/icback.svg" alt="">
+        </a>
+      </div>
+      <div class="download">
+        <a href="#">
+          <img src="./images/header_app.png" alt="">
+        </a>
+      </div>
+      <div class="center">优惠券</div>
+    </div>
+   
+    <p class="prompt">--点餐前出示手机中的优惠券，即可享受优惠--</p>
+    <div class="coupon-list">
+       <ul class="clearfix">
+
+       </ul>
+    </div>
+   
+
+    
+
+      <!-- 底部 -->
+      <div class="mm-footer">
+        <ul>
+          <li><a href="#">登录</a></li>
+          <li><a href="#">注册</a></li>
+          <li><a href="#" id="top"><img src="./images/top.jpg" alt="">返回顶部</a></li>
+        </ul>
+        <p>手机APP下载<a href="index.html">慢慢买手机版</a> -- 掌上比价平台
+        </p>
+          <p>m.manmanbuy.com</p>
+      </div>
+  </div>
+<!-- 优惠券列表模板 -->
+ <script type="text/html" id="couponTpl">
+  {{ each result v i }}
+     <li class="couponlist">
+        <a href="javascript:;">
+           <div class="pic" data-index="{{v.couponProductId}}">{{@v.couponProductImg}}</div>
+           <div class="text">
+            <p>{{ v.couponProductName }}</p>
+            <p>{{ v.couponProductPrice }}</p>
+            <p>{{ v.couponProductTime }}<span></span></p>
+           </div>
+        </a>
+     </li>
+  {{ /each }}
+</script>
+
+ <!-- 轮播图模板 -->
+ <script type="text/html" id="imgTpl">
+  {{ each result v i }}
+       {{@v.couponProductImg}}
+  {{ /each }}
+
+</script>
+
+
+</body>
+<script src="./lib/artTemplate/template-web.js"></script>
+<script src="./lib/jquery/jquery.min.js"></script>
+<script src="./lib/IScroll/iscroll.js"></script>
+<script src="./js/rem.js"></script>
+<script src="./js/common.js"></script>
+<script src="./js/couponproduct.js"></script>
+
+</html>
